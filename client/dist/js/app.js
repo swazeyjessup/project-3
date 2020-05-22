@@ -14665,7 +14665,7 @@ var Main = function (_Component) {
                 _react2.default.createElement(
                   _reactRouterDom.Link,
                   { to: '/' },
-                  'Habbit Tracker'
+                  'Habit Tracker'
                 )
               ),
               this.state.authenticated ? _react2.default.createElement(
