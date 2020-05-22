@@ -16,8 +16,8 @@ class HomePage extends React.Component {
           {Auth.isUserAuthenticated() ? (
             <CardText style={{ fontSize: '16px', color: 'green' }}>Welcome! You are logged in.</CardText>
           ) : (
-            <CardText style={{ fontSize: '16px', color: 'green' }}>You are not logged in.</CardText>
-          )}
+            <CardText style={{ fontSize: '16px', color: 'green' }}>I need to be able to change something somewhere!!</CardText>
+          ) }
       </Card>
     )
   }
