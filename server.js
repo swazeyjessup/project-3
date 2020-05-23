@@ -3,10 +3,10 @@ const PORT = process.env.PORT || 3030;
 const app = express();
 const mongoose = require('mongoose');
 
-mongoose.Promise = global.Promise;
-mongoose.connect("mongodb://localhost:27017/HabitTracker", { 
-    useNewUrlParser: true 
-});
+// mongoose.Promise = global.Promise;
+// mongoose.connect("mongodb://localhost:27017/HabitTracker", { 
+//     useNewUrlParser: true 
+// });
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));

@@ -11,6 +11,7 @@ export default function ToDoList(props) {
                     toDoList.map(toDoItem => (<ToDoItem toDoItem={toDoItem} />))
                 }
             </ul>
+            { console.log('to do list running') }
         </div>
     );
 }
