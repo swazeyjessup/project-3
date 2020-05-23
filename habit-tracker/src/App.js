@@ -14,8 +14,11 @@ class App extends Component{
   render() {
   return (
     <ToDoList toDoList={this.state.toDoList} />
+  
   );
-}
+  
+};
+
 }
 
 export default App;
