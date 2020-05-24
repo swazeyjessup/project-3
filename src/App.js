@@ -1,64 +1,24 @@
 import React, { Component } from "react";
-import ToDoList from './components/ToDoList/';
-import AddToDo from './components/AddToDo/';
+import { BrowserRouter as Router, Route } from "react-router-dom";
+
+//import ToDoList from './components/ToDoList/';
+//import AddToDo from './components/AddToDo/';
+
+import Form from "./pages/Form";
+import Habits from "./pages/Habits";
+import Leaderboard from "./pages/Leaderboard";
 
 class App extends Component {
-  state = {
-    toDoItem: '',
-    toDoList: [
-      {
-        text: 'Display to do item',
-        done: true
-      }
-    ]
-  };
-
-  updateToDoItem = (event) => {
-    const { name, value } = event.target;
-
-    this.setState({
-      [name]: value
-    })
-  }
-
-  saveToDoItem = (event) => {
-    event.preventDefault();
-
-    const newToDoItem = {
-      text: this.state.toDoItem,
-      done: false
-    }
-
-    this.setState({
-      toDoList: this.state.toDoList.concat(newToDoItem),
-      toDoItem: ''
-    })
-  }
-
-  markAsDone = (event) => {
-    const index = event.target.value;
-    let toDoItem = this.state.toDoList[index];
-    toDoItem.done = !toDoItem.done;
-
-    this.setState({
-      toDoList: this.state.toDoList
-    })
-  }
 
   render() {
     return (
+      <Router>
       <div>
-        <h1>To Do List</h1>
-        <AddToDo
-          toDoItem={this.state.toDoItem}
-          updateToDoItem={this.updateToDoItem}
-          saveToDoItem={this.saveToDoItem}
-        />
-        <ToDoList
-          toDoList={this.state.toDoList}
-          markAsDone={this.markAsDone}
-        />
+      <Route exact path="/" component={Habits} />
+      <Route exact path="/form" component={Form} />
+      <Route exact path="/leaderboard" component={Leaderboard} />
       </div>
+      </Router>
     );
   }
 }
