@@ -51,11 +51,11 @@ render() {
 return (
     <div>
     <h1>To Do List</h1>
-    <AddToDo
+    {/* <AddToDo
         toDoItem={this.state.toDoItem}
         updateToDoItem={this.updateToDoItem}
         saveToDoItem={this.saveToDoItem}
-    />
+    /> */}
     <ToDoList
         toDoList={this.state.toDoList}
         markAsDone={this.markAsDone}

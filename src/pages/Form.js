@@ -56,10 +56,10 @@ class Form extends Component {
           updateToDoItem={this.updateToDoItem}
           saveToDoItem={this.saveToDoItem}
         />
-        <ToDoList
+        {/* <ToDoList
           toDoList={this.state.toDoList}
           markAsDone={this.markAsDone}
-        />
+        /> */}
       </div> 
     );
 }
