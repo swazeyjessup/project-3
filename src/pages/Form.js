@@ -50,7 +50,7 @@ class Form extends Component {
     render() {
     return (
         <div>
-        <h1>To Do List</h1>
+        <h1>Add a Habit</h1>
         <AddToDo
           toDoItem={this.state.toDoItem}
           updateToDoItem={this.updateToDoItem}

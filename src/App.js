@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import NavBar from "./components/NavBar";
 
+
 import Form from "./pages/Form";
 import Habits from "./pages/Habits";
 import Leaderboard from "./pages/Leaderboard";
