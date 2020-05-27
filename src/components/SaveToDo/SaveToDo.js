@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import ToDoItem from "../components/ToDoItem";
+// import React, { Component } from "react";
+// import ToDoItem from "../components/ToDoItem";
 
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
-const ToDoMap = props.ToDoMap
+// const ToDoMap = props.ToDoMap
 
 var ToDoSchema = new Schema({
     text: String,
@@ -11,10 +11,10 @@ var ToDoSchema = new Schema({
 });
 
 
-ToDoMap.map((ToDoItem, index) => (
-    SavingToDo = {ToDoSchema}
-))
+// ToDoMap.map((ToDoItem, index) => (
+//     SavingToDo = {ToDoSchema}
+// ))
 
 
-const SaveToDo = mongoose.model('habits', ToDoSchema);
-module.exports = SaveToDo;
+const Habit = mongoose.model('habit', ToDoSchema);
+module.exports = Habit;
