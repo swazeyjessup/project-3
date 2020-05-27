@@ -2,7 +2,7 @@ var express = require("express");
 const PORT = process.env.PORT || 3030;
 const app = express();
 const mongoose = require('mongoose');
-const Habit = require('src/components/SaveToDo/');
+//const Habit = require('src/components/SaveToDo/');
 
 mongoose.Promise = global.Promise;
 mongoose.connect("mongodb://localhost:27017/HabitTracker", { 
