@@ -9,10 +9,11 @@ return (
 <div>
     <form>
     <div>
+        <label for="name">Habit:</label><br></br>
         <input
         type="text"
         name="toDoItem"
-        placeholder="Add a to do item"
+        placeholder="Add a habit"
         value={toDoItem}
         onChange={updateToDoItem}
         />
