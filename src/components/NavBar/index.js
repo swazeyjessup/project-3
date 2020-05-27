@@ -19,7 +19,7 @@ function NavBar() {
                         <Link
                             to="/form"
                             className={window.location.pathname === "/saved" ? "nav-link active" : "nav-link"}
-                        >Form</Link>
+                        >Add Habit</Link>
                         </li>
                         <li className="nav-item">
                         <Link

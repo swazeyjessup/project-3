@@ -49,17 +49,17 @@ class Form extends Component {
 
     render() {
     return (
-        <div>
-        <h1>Add a Habit</h1>
+        <div className="container">
+        <h1>Add Habit</h1>
         <AddToDo
           toDoItem={this.state.toDoItem}
           updateToDoItem={this.updateToDoItem}
           saveToDoItem={this.saveToDoItem}
         />
-        <ToDoList
+        {/* <ToDoList
           toDoList={this.state.toDoList}
           markAsDone={this.markAsDone}
-        />
+        /> */}
       </div> 
     );
 }

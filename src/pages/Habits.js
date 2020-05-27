@@ -2,8 +2,9 @@
 import React, { Component } from "react";
 import AddToDo from "../components/AddToDo";
 import ToDoList from "../components/ToDoList";
+import Form from "../pages/Form";
 
-class Form extends Component {
+class Habits extends Component {
 state = {
     toDoItem: '',
     toDoList: [
@@ -49,8 +50,8 @@ markAsDone = (event) => {
 
 render() {
 return (
-    <div>
-    <h1>To Do List</h1>
+    <div className="container">
+    <h1>Habits</h1>
     {/* <AddToDo
         toDoItem={this.state.toDoItem}
         updateToDoItem={this.updateToDoItem}
@@ -66,4 +67,4 @@ return (
 
 }
 
-export default Form;
+export default Habits;
