@@ -2,7 +2,7 @@ var express = require("express");
 const PORT = process.env.PORT || 3030;
 const app = express();
 const mongoose = require('mongoose');
-import SaveToDo from 'src/components/SaveToDo/';
+const Habit = require('src/components/SaveToDo/');
 
 mongoose.Promise = global.Promise;
 mongoose.connect("mongodb://localhost:27017/HabitTracker", { 
@@ -20,7 +20,7 @@ if (process.env.NODE_ENV === "production") {
 
 // Define any API routes before this runs
 app.get("*", (request, response) => {
-    SaveToDo.find({})
+    Habit.find({})
     .then(function (data) {
     response.status(200).json(data);
     })
@@ -31,7 +31,7 @@ app.get("*", (request, response) => {
 
 app.delete("*", (request, response) => {
 const mongoID = request.params.id;
-SaveToDo.remove({
+ToDo.remove({
     _id: mongoID,
 })
 .then((data) => {
