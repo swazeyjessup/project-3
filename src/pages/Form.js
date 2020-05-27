@@ -34,6 +34,8 @@ class Form extends Component {
         toDoList: this.state.toDoList.concat(newToDoItem),
         toDoItem: ''
       })
+
+      
     }
   
     markAsDone = (event) => {
