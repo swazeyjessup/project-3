@@ -3,7 +3,12 @@ import React, { Component } from "react";
 import AddToDo from "../components/AddToDo";
 import ToDoList from "../components/ToDoList";
 
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
+
 class Form extends Component {
+
+
     state = {
       toDoItem: '',
       toDoList: [
@@ -21,6 +26,8 @@ class Form extends Component {
         [name]: value
       })
     }
+
+
   
     saveToDoItem = (event) => {
       event.preventDefault();
@@ -35,7 +42,6 @@ class Form extends Component {
         toDoItem: ''
       })
 
-      
     }
   
     markAsDone = (event) => {
@@ -58,6 +64,7 @@ class Form extends Component {
           updateToDoItem={this.updateToDoItem}
           saveToDoItem={this.saveToDoItem}
         />
+
         {/* <ToDoList
           toDoList={this.state.toDoList}
           markAsDone={this.markAsDone}
