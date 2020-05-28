@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const express = require("express");
 const session = require("express-session");
 const MongoStore = require("connect-mongo")(session);
@@ -8,6 +9,15 @@ const passport = require("./passport/setup");
 const auth = require("./routes/auth");
 //add route to login page - ask Chris?
 const MONGO_URI = "mongodb://localhost:27017";
+=======
+var express = require("express");
+const path = require("path");
+const PORT = process.env.PORT || 3030;
+const app = express();
+const mongoose = require('mongoose');
+
+const Habit = require('./models/SaveToDo/');
+>>>>>>> 92b7dc01428c3ae4d1c06e932da8b655665c47b3
 
 mongoose.Promise = global.Promise;
 mongoose.connect(MONGO_URI, "mongodb://localhost:27017/HabitTracker", { 
