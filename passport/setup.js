@@ -16,13 +16,14 @@ passport.deserializeUser((id, done) => {
 //Local strategy
 passport.use(
     new LocalStrategy({
-        usernameField: "email"}, (email, password, done) => {
-            //Match user
-            User.findOne({ email: email})
+        usernameField: "email"
+    }, (email, password, done) => {
+        //Match user
+        User.findOne({ email: email })
             .then(user => {
                 //Create new user
                 if (!user) {
-                    const newUser = new User({ email, password});
+                    const newUser = new User({ email, password });
 
                     //Hash password before saving in database
                     bcrypt.genSalt(10, (err, salt) => {
@@ -30,15 +31,15 @@ passport.use(
                             if (err) throw err;
                             newUser.password = hash;
                             newUser.save()
-                            .then(user => {
-                                return done(null, user);
-                            })
-                            .catch(err => {
-                                return done(null, false, { message: err});
-                            });
+                                .then(user => {
+                                    return done(null, user);
+                                })
+                                .catch(err => {
+                                    return done(null, false, { message: err });
+                                });
                         });
                     });
-                    
+
                     //Return other user
                 } else {
                     //Match password
@@ -47,15 +48,15 @@ passport.use(
                         if (isMatch) {
                             return done(null, user);
                         } else {
-                            return done(null, false, { message: "Wrong password"});
+                            return done(null, false, { message: "Wrong password" });
                         }
                     });
                 }
             })
             .catch(err => {
-                return done(null, false, { message: err});
+                return done(null, false, { message: err });
             });
-        })
+    })
 );
 
 module.exports = passport;

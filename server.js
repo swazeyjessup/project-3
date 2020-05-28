@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const express = require("express");
 const session = require("express-session");
 const MongoStore = require("connect-mongo")(session);
@@ -9,19 +8,11 @@ const passport = require("./passport/setup");
 const auth = require("./routes/auth");
 //add route to login page - ask Chris?
 const MONGO_URI = "mongodb://localhost:27017";
-=======
-var express = require("express");
-const path = require("path");
-const PORT = process.env.PORT || 3030;
-const app = express();
-const mongoose = require('mongoose');
-
-const Habit = require('./models/SaveToDo/');
->>>>>>> 92b7dc01428c3ae4d1c06e932da8b655665c47b3
 
 mongoose.Promise = global.Promise;
-mongoose.connect(MONGO_URI, "mongodb://localhost:27017/HabitTracker", { 
-    useNewUrlParser: true })
+mongoose.connect(MONGO_URI, "mongodb://localhost:27017/HabitTracker", {
+    useNewUrlParser: true
+})
     .then(console.log(`MongoDB connected ${MONGO_URI}`))
     .catch(err => console.log(err));
 
@@ -55,25 +46,25 @@ app.get("/", (req, res) => res.send("Hello!"));
 // Define any API routes before this runs
 app.get("*", (request, response) => {
     Habit.find({})
-    .then(function (data) {
-    response.status(200).json(data);
-    })
-    .catch(function () {
-    response.status(404).end("404!! Information BLACK HOLE!!");
-    });
+        .then(function (data) {
+            response.status(200).json(data);
+        })
+        .catch(function () {
+            response.status(404).end("404!! Information BLACK HOLE!!");
+        });
 });
 
 app.delete("*", (request, response) => {
-const mongoID = request.params.id;
-ToDo.remove({
-    _id: mongoID,
-})
-.then((data) => {
-    response.status(200).end();
-})
-.catch((error) => {
-    response.status(404).send(error.message);
-});
+    const mongoID = request.params.id;
+    ToDo.remove({
+        _id: mongoID,
+    })
+        .then((data) => {
+            response.status(200).end();
+        })
+        .catch((error) => {
+            response.status(404).send(error.message);
+        });
 });
 
 // app.post("*", (request, response) => {
@@ -89,5 +80,5 @@ ToDo.remove({
 // });
 
 app.listen(PORT, () => {
-console.log(`🌎 ==> API server now on port ${PORT}!`);
+    console.log(`🌎 ==> API server now on port ${PORT}!`);
 });
