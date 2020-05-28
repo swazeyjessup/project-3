@@ -1,5 +1,5 @@
 import React from 'react';
-import ToDoItem from '../ToDoItem/';
+import ToDoItem from '../ToDoItem';
 
 function ToDoList(props) {
 const toDoList = props.toDoList;

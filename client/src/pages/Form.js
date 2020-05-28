@@ -3,8 +3,8 @@ import React, { Component } from "react";
 import AddToDo from "../components/AddToDo";
 import ToDoList from "../components/ToDoList";
 
-var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
+// var mongoose = require('mongoose');
+// var Schema = mongoose.Schema;
 
 class Form extends Component {
 

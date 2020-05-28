@@ -2,7 +2,7 @@
 import React, { Component } from "react";
 import AddToDo from "../components/AddToDo";
 import ToDoList from "../components/ToDoList";
-import Form from "../pages/Form";
+import Form from "./Form";
 
 class Habits extends Component {
 state = {
