@@ -2,7 +2,8 @@
 import React, { Component } from "react";
 import AddToDo from "../components/AddToDo";
 import ToDoList from "../components/ToDoList";
-import Form from "./Form";
+import Form from "../pages/Form";
+import axios from 'axios';
 
 class Habits extends Component {
 state = {
@@ -23,18 +24,28 @@ updateToDoItem = (event) => {
     })
 }
 
+
+
 saveToDoItem = (event) => {
+
     event.preventDefault();
 
-    const newToDoItem = {
-    text: this.state.toDoItem,
-    done: false
-    }
+    const newHabit = {
+        text: this.state.toDoItem,
+        done: false
+        }
+
+    axios
+    .post('/localhost:3001/HabitTracker', newHabit)
+    .catch((error) => console.log(error));
+
+    this.newHabit(this.props);
 
     this.setState({
-    toDoList: this.state.toDoList.concat(newToDoItem),
+    toDoList: this.state.toDoList.concat(newHabit),
     toDoItem: ''
     })
+
 }
 
 markAsDone = (event) => {
