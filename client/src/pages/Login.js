@@ -7,80 +7,48 @@ import setup from "passport";
 import auth from "routes";
 import axios from 'axios';
 
-class Form extends Component {
-
-
-    state = {
-        username: '',
-        password: '',
-        toDoList: [
-            {
-                text: 'Display to do item',
-                done: true
-            }
-        ]
-    };
-
-    updateToDoItem = (event) => {
-        const { name, value } = event.target;
-
-        this.setState({
-            [name]: value
-        })
+class Login extends Component {
+// export default 
+function () {
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+  
+    function validateForm() {
+      return email.length > 0 && password.length > 0;
     }
-
-
-
-    saveToDoItem = (event) => {
-
-        event.preventDefault();
-
-        const newHabit = {
-            text: this.state.toDoItem,
-            done: false
-        }
-
-        axios
-            .post("/localhost:27017/HabitTracker", newHabit)
-            .catch((error) => console.log(error));
-
-
-        this.setState({
-            toDoList: this.state.toDoList.concat(newHabit),
-            toDoItem: ''
-        })
-
+  
+    function handleSubmit(event) {
+      event.preventDefault();
     }
-
-    markAsDone = (event) => {
-        const index = event.target.value;
-        let toDoItem = this.state.toDoList[index];
-        toDoItem.done = !toDoItem.done;
-
-        this.setState({
-            toDoList: this.state.toDoList
-        })
-    }
-
-
-    render() {
+  
+    render () {
         return (
-            <div className="container">
-                <h1>Add Habit</h1>
-                <AddToDo
-                    toDoItem={this.state.toDoItem}
-                    updateToDoItem={this.updateToDoItem}
-                    saveToDoItem={this.saveToDoItem}
-                />
-
-                {/* <ToDoList
-          toDoList={this.state.toDoList}
-          markAsDone={this.markAsDone}
-        /> */}
-            </div>
-        );
-    }
-
+      <div className="Login">
+        <form onSubmit={handleSubmit}>
+          <FormGroup controlId="email" bsSize="large">
+            <ControlLabel>Email</ControlLabel>
+            <FormControl
+              autoFocus
+              type="email"
+              value={email}
+              onChange={e => setEmail(e.target.value)}
+            />
+          </FormGroup>
+          <FormGroup controlId="password" bsSize="large">
+            <ControlLabel>Password</ControlLabel>
+            <FormControl
+              value={password}
+              onChange={e => setPassword(e.target.value)}
+              type="password"
+            />
+          </FormGroup>
+          <Button block bsSize="large" disabled={!validateForm()} type="submit">
+            Login
+          </Button>
+        </form>
+      </div>
+    );
+  }
 }
 
-export default Form;
+export default Login;
