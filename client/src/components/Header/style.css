@@ -1,0 +1,17 @@
+img {
+    width: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo{
+    border-color: #cadcfa;
+    border-width: 3px;
+    margin-top: 5px;
+}
+
+.container{
+    border-color: #cadcfa;
+    border-width: 3px;
+}

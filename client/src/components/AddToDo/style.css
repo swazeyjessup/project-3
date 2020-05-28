@@ -1,15 +1,12 @@
 .btn {
-    background-color: #cadcfa;
+    background-color: #acf1fa;
     color: white;
     margin-left: 10px; 
 }
 
 .form-control {
-    border-color: #cadcfa;
+    border-color: #acf1fa;
     border-width: 3px;
    
 }
 
-.form {
-  
-}
