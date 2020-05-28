@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+
+.page{
+  background-image: url(./img/download.jpeg);
+}
