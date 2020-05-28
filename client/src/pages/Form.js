@@ -1,10 +1,9 @@
 
 import React, { Component } from "react";
 import AddToDo from "../components/AddToDo";
-import ToDoList from "../components/ToDoList";
+// import ToDoList from "../components/ToDoList";
 
-// var mongoose = require('mongoose');
-// var Schema = mongoose.Schema;
+import axios from 'axios';
 
 class Form extends Component {
 
@@ -30,19 +29,25 @@ class Form extends Component {
 
   
     saveToDoItem = (event) => {
+
       event.preventDefault();
   
-      const newToDoItem = {
-        text: this.state.toDoItem,
-        done: false
-      }
+      const newHabit = {
+          text: this.state.toDoItem,
+          done: false
+          }
   
-      this.setState({
-        toDoList: this.state.toDoList.concat(newToDoItem),
-        toDoItem: ''
-      })
+      axios
+      .post("/localhost:27017/HabitTracker", newHabit)
+      .catch((error) => console.log(error));
 
-    }
+
+      this.setState({
+      toDoList: this.state.toDoList.concat(newHabit),
+      toDoItem: ''
+      })
+  
+  }
   
     markAsDone = (event) => {
       const index = event.target.value;
