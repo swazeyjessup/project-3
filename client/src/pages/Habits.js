@@ -1,8 +1,9 @@
 
 import React, { Component } from "react";
-import AddToDo from "../components/AddToDo";
+// import AddToDo from "../components/AddToDo";
 import ToDoList from "../components/ToDoList";
-import Form from "../pages/Form";
+// import Form from "../pages/Form";
+
 import axios from 'axios';
 
 class Habits extends Component {
@@ -22,7 +23,7 @@ updateToDoItem = (event) => {
     this.setState({
     [name]: value
     })
-}
+};
 
 
 
@@ -36,17 +37,17 @@ saveToDoItem = (event) => {
         }
 
     axios
-    .post('/localhost:3001/HabitTracker', newHabit)
+    .post("/localhost:27017/HabitTracker", newHabit)
     .catch((error) => console.log(error));
 
-    this.newHabit(this.props);
+    this.newHabit();
 
     this.setState({
     toDoList: this.state.toDoList.concat(newHabit),
     toDoItem: ''
     })
 
-}
+};
 
 markAsDone = (event) => {
     const index = event.target.value;
@@ -56,7 +57,7 @@ markAsDone = (event) => {
     this.setState({
     toDoList: this.state.toDoList
     })
-}
+};
 
 
 render() {
