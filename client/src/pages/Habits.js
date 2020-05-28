@@ -5,8 +5,6 @@ import ToDoList from "../components/ToDoList";
 import Form from "../pages/Form";
 import axios from 'axios';
 
-
-
 class Habits extends Component {
 state = {
     toDoItem: '',

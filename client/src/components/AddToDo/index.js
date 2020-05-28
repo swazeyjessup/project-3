@@ -1,5 +1,5 @@
 import React from 'react';
-import style from "../AddToDo/style.css"
+import style from "./style.css"
 
 
 export default function AddToDo(props) {
