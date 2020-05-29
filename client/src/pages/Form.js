@@ -38,7 +38,7 @@ class Form extends Component {
           }
   
       axios
-      .post("/localhost:27017/HabitTracker", newHabit)
+      .post("/HabitTracker", newHabit)
       .catch((error) => console.log(error));
 
 
