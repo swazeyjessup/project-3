@@ -1,54 +1,65 @@
-//onchange handler to save what's in input fields (saves to state)
-//onclick function
+
 //axios call 
 
 import React, { Component } from "react";
-import setup from "passport";
-import auth from "routes";
-import axios from 'axios';
+// import Passport from "passport-local-mongoose";
+// import router from "../routes/auth";
+// import axios from 'axios';
 
 class Login extends Component {
-// export default 
-function () {
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-  
-    function validateForm() {
-      return email.length > 0 && password.length > 0;
+
+  //Setting component's initial state
+  state = {
+    email: "",
+    password: "",
+  };
+
+  handleInputChange = event => {
+
+    // Getting the value and name of the input which triggered the change
+    let value = event.target.value;
+    const name = event.target.name;
+
+    if (name === "password") {
+      value = value.substring(0, 15);
     }
-  
-    function handleSubmit(event) {
-      event.preventDefault();
-    }
-  
-    render () {
-        return (
-      <div className="Login">
-        <form onSubmit={handleSubmit}>
-          <FormGroup controlId="email" bsSize="large">
-            <ControlLabel>Email</ControlLabel>
-            <FormControl
-              autoFocus
-              type="email"
-              value={email}
-              onChange={e => setEmail(e.target.value)}
-            />
-          </FormGroup>
-          <FormGroup controlId="password" bsSize="large">
-            <ControlLabel>Password</ControlLabel>
-            <FormControl
-              value={password}
-              onChange={e => setPassword(e.target.value)}
-              type="password"
-            />
-          </FormGroup>
-          <Button block bsSize="large" disabled={!validateForm()} type="submit">
-            Login
-          </Button>
+    // Updating the input's state
+    this.setState({
+      [name]: value
+    });
+  };
+
+  handleFormSubmit = event => {
+    this.setState({
+      email: "",
+      password: "",
+    });
+  };
+
+  render() {
+
+    return (
+      <div>
+        <form className="logininfo">
+          <input
+            value={this.state.email}
+            name="email"
+            onChange={this.handleInputChange}
+            type="text"
+            placeholder="Email Address"
+          />
+          <input
+            value={this.state.password}
+            name="password"
+            onChange={this.handleInputChange}
+            type="password"
+            placeholder="Password"
+          />
+          <button onClick={this.handleFormSubmit}>Submit</button>
         </form>
       </div>
-    );
+    )
   }
-}
+};
 
 export default Login;
