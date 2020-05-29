@@ -39,4 +39,6 @@
 
 .page{
   background-image: url(./img/download.jpeg);
+  background-repeat: repeat-y;
+  height: 100%;
 }

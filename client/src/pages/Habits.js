@@ -6,6 +6,8 @@ import ToDoList from "../components/ToDoList";
 
 import axios from 'axios';
 
+import style from "./style.css";
+
 class Habits extends Component {
 state = {
     toDoItem: '',

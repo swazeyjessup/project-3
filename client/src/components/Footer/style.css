@@ -1,0 +1,14 @@
+.footer{
+    background-color: #e4c4e8;
+    margin-top: 15px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+
+.logo3{
+    width: 125px;
+    height: auto;
+}
