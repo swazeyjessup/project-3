@@ -6,8 +6,9 @@ function NavBar() {
     return (
 
         <nav className="navbar navbar-expand-lg text-light">
+           <img src={require("../NavBar/logo.jpeg")} alt="loading" className="logo2" /> 
         <div className="container">
-            <Link className="navbar-brand" to="/">Habit Tracker</Link>
+        
             <ul className="navbar-nav">
                     <li className="nav-item">
                         <Link

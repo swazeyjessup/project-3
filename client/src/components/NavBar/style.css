@@ -1,6 +1,7 @@
   
 nav {
     background-color: #e4c4e8;
+
 }
 
 a {
@@ -19,3 +20,11 @@ a {
 .nav-item {
     font-size: 25px;
 }
+
+.logo2 {
+   
+   height: 80px;
+    width: auto;
+   padding: 0 0 0 150px ;
+}
+
