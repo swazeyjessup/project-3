@@ -6,7 +6,7 @@ import Header from "./components/Header";
 import Wrapper from "./components/Wrapper";
 import Footer from "./components/Footer";
 
-
+import Login from "./pages/Login";
 import Form from "./pages/Form";
 import Habits from "./pages/Habits";
 import Leaderboard from "./pages/Leaderboard";
@@ -22,7 +22,8 @@ class App extends Component {
         <NavBar />
         <Header />
         <Wrapper>
-      <Route exact path="/" component={Habits} />
+      <Route exact path="/" component={Login} />
+      <Route exact path="/habits" component={Habits} />
       <Route exact path="/form" component={Form} />
       <Route exact path="/leaderboard" component={Leaderboard} />
       </Wrapper>
