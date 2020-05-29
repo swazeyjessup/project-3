@@ -18,11 +18,10 @@ class App extends Component {
       <Router>
       <div className="page">
         <NavBar />
-      <Route exact path="/" component={Login} />
-      <Route exact path="/habits" component={Habits} />
         <Header />
         <Wrapper>
-      <Route exact path="/" component={Habits} />
+      <Route exact path="/" component={Login} />
+      <Route exact path="/habits" component={Habits} />
       <Route exact path="/form" component={Form} />
       <Route exact path="/leaderboard" component={Leaderboard} />
       </Wrapper>

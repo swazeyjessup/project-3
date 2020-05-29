@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 const passport = require("./passport/setup");
 const auth = require("./routes/auth");
 //add route to login page - ask Chris?
-const MONGO_URI = "mongodb://localhost:27017";
+const MONGO_URI = "mongodb://localhost:27017/LoginPage";
 
 mongoose.Promise = global.Promise;
 mongoose.connect(MONGO_URI, "mongodb://localhost:27017/HabitTracker", {
@@ -15,6 +15,13 @@ mongoose.connect(MONGO_URI, "mongodb://localhost:27017/HabitTracker", {
 })
     .then(console.log(`MongoDB connected ${MONGO_URI}`))
     .catch(err => console.log(err));
+
+const Habit = require('./models/Habit');
+
+mongoose.Promise = global.Promise;
+mongoose.connect("mongodb://localhost:27017/HabitTracker", {
+    useNewUrlParser: true
+});
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -67,17 +74,17 @@ app.delete("*", (request, response) => {
         });
 });
 
-// app.post("*", (request, response) => {
-// const bookData = request.body;
-// console.log(bookData)
-// SaveToDo.create(bookData)
-// .then(function () {
-//     response.status(200).end();
-// })
-// .catch(function (error) {
-//     response.status(404).send(error.message);
-// });
-// });
+app.post("*", (request, response) => {
+    const HabitData = request.body;
+    console.log(HabitData)
+    Habit.create(HabitData)
+        .then(function () {
+            response.status(200).end();
+        })
+        .catch(function (error) {
+            response.status(404).send(error.message);
+        });
+});
 
 app.listen(PORT, () => {
     console.log(`🌎 ==> API server now on port ${PORT}!`);

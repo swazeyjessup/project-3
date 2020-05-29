@@ -1,3 +1,4 @@
 module.exports = {
-    Habit: require("./SaveToDo")
+    Habit: require("./Habit"),
+    User: require("./users")
 }
