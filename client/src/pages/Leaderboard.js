@@ -1,5 +1,10 @@
 import React, { Component } from "react";
 
+import NavBar from "../components/NavBar";
+import Header from "../components/Header";
+import Wrapper from "../components/Wrapper";
+import Footer from "../components/Footer";
+
 import style from "./style.css";
 
 class Leaderboard extends Component {

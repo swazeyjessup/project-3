@@ -6,6 +6,11 @@ import AddToDo from "../components/AddToDo";
 import axios from 'axios';
 import style from "./style.css";
 
+import NavBar from "../components/NavBar";
+import Header from "../components/Header";
+import Wrapper from "../components/Wrapper";
+import Footer from "../components/Footer";
+
 class Form extends Component {
 
 
@@ -63,7 +68,14 @@ class Form extends Component {
 
     render() {
     return (
+      <div>
+        <NavBar />
+        <Header />
+        <Wrapper>
+
+       
         <div className="container">
+      
         <h1>Add Habit</h1>
         <AddToDo
           toDoItem={this.state.toDoItem}
@@ -76,6 +88,9 @@ class Form extends Component {
           markAsDone={this.markAsDone}
         /> */}
       </div> 
+       </Wrapper>
+       <Footer />
+      </div>
     );
 }
 

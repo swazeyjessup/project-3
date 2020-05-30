@@ -6,6 +6,11 @@ import ToDoList from "../components/ToDoList";
 
 import axios from 'axios';
 
+import NavBar from "../components/NavBar";
+import Header from "../components/Header";
+import Wrapper from "../components/Wrapper";
+import Footer from "../components/Footer";
+
 import style from "./style.css";
 
 class Habits extends Component {
@@ -64,6 +69,10 @@ markAsDone = (event) => {
 
 render() {
 return (
+    <div>
+        <NavBar />
+        <Header />
+        <Wrapper>
     <div className="container">
     <h1>Habits</h1>
     {/* <AddToDo
@@ -76,6 +85,9 @@ return (
         markAsDone={this.markAsDone}
     />
     </div> 
+    </Wrapper>
+    <Footer />
+    </div>
 );
 }
 
