@@ -12,7 +12,7 @@ return (
     <form>
         <div className="form-control">
     <div className="form-group">
-        <label for="name"><h2>What habit are you working on today?</h2></label><br></br>
+        <label htmlFor="name"><h2>What habit are you working on today?</h2></label><br></br>
         <input
         type="text"
         name="toDoItem"
