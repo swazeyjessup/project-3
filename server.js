@@ -8,7 +8,7 @@ const mongoose = require('mongoose');
 // const session = require("express-session");
 // const MongoStore = require("connect-mongo")(session);
 
-let Habit;
+const Habit = require('./models/Habit');    
 
 mongoose.Promise = global.Promise;
 mongoose.connect("mongodb://localhost:27017/HabitTracker", {
@@ -16,7 +16,6 @@ mongoose.connect("mongodb://localhost:27017/HabitTracker", {
 })
     .then(function(){
         console.log('Mongoose Connected')
-        Habit = require('./client/src/models/Habit');    
     })
     .catch(err => console.log(err));
 
