@@ -1,8 +1,5 @@
 import React, { Component } from "react";
-// import AddToDo from "../components/AddToDo";
-import SavedHabit from "../components/SavedHabit/SavedHabit";
-// import Form from "../pages/Form";
-
+import HabitList from "../components/HabitList/HabitList";
 import axios from 'axios';
 
 import NavBar from "../components/NavBar";
@@ -12,10 +9,10 @@ import Footer from "../components/Footer";
 
 import style from "./style.css";
 
-class SavedHabits extends Component {
+class App extends Component {
     state = {
-        SavedHabit: '',
-        toDoList: [
+        toDoItem: '',
+        HabitList: [
             {
                 text: 'Display to do item',
                 done: true
@@ -23,42 +20,25 @@ class SavedHabits extends Component {
         ]
     };
 
-    updateSavedHabit = (event) => {
+    updateToDoItem = (event) => {
         const { name, value } = event.target;
 
         this.setState({
             [name]: value
         })
-
-        axios
-            .get("/api/savedHabits")
-            .then((response) => {
-                this.setState({ [name]: response.data });
-            })
-            .catch((error) => console.log(error));
     };
 
-
-
-    // saveToDoItem = (event) => {
-
-    //     event.preventDefault();
+    MarkAsDone = (event) => {
+        const index = event.target.value;
+        let toDoItem = this.state.HabitList[index];
+        toDoItem.done = !toDoItem.done;
     
-    //     const newHabit = {
-    //         text: this.state.toDoItem,
-    //         done: false
-    //         }
+        this.setState({
+            HabitList: this.state.HabitList
+        })
+        
+    }
     
-    //     axios
-    //     .post("/HabitTracker", newHabit)
-    //     .catch((error) => console.log(error));
-
-    //     this.setState({
-    //     toDoList: this.state.toDoList.concat(newHabit),
-    //     toDoItem: ''
-    //     })
-    
-    // }
 
     render() {
         return (
@@ -68,14 +48,9 @@ class SavedHabits extends Component {
             <Wrapper>
         <div className="container">
         <h1>Habits</h1>
-        {/* <AddToDo
-            toDoItem={this.state.toDoItem}
-            updateToDoItem={this.updateToDoItem}
-            saveToDoItem={this.saveToDoItem}
-        /> */}
-        <SavedHabit
-            SavedHabit={this.state.SavedHabit}
-            markAsDone={this.markAsDone}
+        <HabitList
+            HabitList={this.state.HabitList}
+            MarkAsDone={this.MarkAsDone}
         />
         </div> 
         </Wrapper>
@@ -89,4 +64,4 @@ class SavedHabits extends Component {
 
 
 
-export default SavedHabits;
+export default App;
