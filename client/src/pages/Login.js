@@ -7,6 +7,9 @@ import React, { Component } from "react";
 // import axios from 'axios';
 
 import LoginForm from "../components/LoginForm";
+import Header from "../components/Header";
+import Wrapper from "../components/Wrapper";
+import Footer from "../components/Footer";
 
 class Login extends Component {
 
@@ -41,7 +44,16 @@ class Login extends Component {
   render() {
     return (
       <div>
+        <Header />
+        <Wrapper>
+        <div className="container">
+        <h1>Login</h1>
+        </div>
+      <div>
             <LoginForm />
+      </div>
+      </Wrapper>
+      <Footer />
       </div>
     )
 

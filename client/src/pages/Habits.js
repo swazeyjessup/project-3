@@ -7,7 +7,7 @@ import Header from "../components/Header";
 import Wrapper from "../components/Wrapper";
 import Footer from "../components/Footer";
 
-import style from "./style.css";
+import "./style.css";
 
 class App extends Component {
     state = {

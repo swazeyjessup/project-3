@@ -6,7 +6,7 @@ function NavBar() {
     return (
 
         <nav className="navbar navbar-expand-lg text-light">
-           <img src={require("../NavBar/logo.jpeg")} alt="loading" className="logo2" /> 
+           <img src={require("../NavBar/logo2.png")} alt="loading" className="logo2" /> 
         <div className="container">
         
             <ul className="navbar-nav">

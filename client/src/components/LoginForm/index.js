@@ -32,53 +32,47 @@ export default function LoginForm() {
 
 
     return (
-      <div>
+      <div className="container">
+      <div className="form-control">
       <form className="logininfo">
-        <label>
-          First Name:
-          <br></br>
-          <input 
-          type="text" 
-          name="First Name"
-          placeholder="First Name" />
-        </label><br></br>
-        <label>
-          Last Name:
-          <br></br>
-          <input 
-          type="text" 
-          name="Last Name" 
-          placeholder="Last Name"/>
-        </label><br></br>
+        <div className="form-group">
         <label>
           Email:
           <br></br>
+             </label>
         <input
           //value={this.state.email}
           name="email"
           //onChange={this.handleInputChange}
           type="text"
           placeholder="Email Address"
-        />
-        </label>
+          className="form-control items"/>
+     
+        
         <br></br>
+        </div>
+        <div className="form-group">
         <label>
           Password
           <br></br>
+            </label>
         <input
           //value={this.state.password}
           name="password"
           //onChange={this.handleInputChange}
           type="password"
           placeholder="Password"
-        />
-        </label>
+          className="form-control items"/>
+      
+        
         <br></br>
-        <button 
+        </div>
+        <button className="btn"
         //onClick={this.handleFormSubmit}
         >
-          Submit</button>
+          Login</button>
       </form>
+    </div>
     </div>
     )
 

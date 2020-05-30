@@ -8,7 +8,7 @@ import Form from "./pages/Form";
 import Habits from "./pages/Habits";
 import Leaderboard from "./pages/Leaderboard";
 
-import style from "./App.css";
+import "./App.css";
 
 class App extends Component {
 
