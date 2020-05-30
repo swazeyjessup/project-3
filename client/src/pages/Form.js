@@ -4,7 +4,7 @@ import AddToDo from "../components/AddToDo";
 // import ToDoList from "../components/ToDoList";
 
 import axios from 'axios';
-import style from "./style.css";
+import "./style.css";
 
 import NavBar from "../components/NavBar";
 import Header from "../components/Header";
