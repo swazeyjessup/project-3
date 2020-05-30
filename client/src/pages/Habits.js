@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 // import AddToDo from "../components/AddToDo";
 import ToDoList from "../components/ToDoList";
-import SHabit from "../components/SHabit/SHabit";
+import Habit from "../components/Habit/Habit";
 // import Form from "../pages/Form";
 
 import axios from 'axios';
@@ -10,7 +10,7 @@ import style from "./style.css";
 
 class Habits extends Component {
     state = {
-        SHabit: '',
+        Habit: '',
         toDoList: [
             {
                 text: 'Display to do item',
@@ -19,7 +19,7 @@ class Habits extends Component {
         ]
     };
 
-    updateSHabit = (event) => {
+    updateHabit = (event) => {
         const { name, value } = event.target;
 
         this.setState({
@@ -36,25 +36,25 @@ class Habits extends Component {
 
 
 
-    // saveToDoItem = (event) => {
+    saveToDoItem = (event) => {
 
-    //     event.preventDefault();
+        event.preventDefault();
     
-    //     const newHabit = {
-    //         text: this.state.toDoItem,
-    //         done: false
-    //         }
+        const newHabit = {
+            text: this.state.toDoItem,
+            done: false
+            }
     
-    //     axios
-    //     .post("/HabitTracker", newHabit)
-    //     .catch((error) => console.log(error));
+        axios
+        .post("/HabitTracker", newHabit)
+        .catch((error) => console.log(error));
 
-    //     this.setState({
-    //     toDoList: this.state.toDoList.concat(newHabit),
-    //     toDoItem: ''
-    //     })
+        this.setState({
+        toDoList: this.state.toDoList.concat(newHabit),
+        toDoItem: ''
+        })
     
-    // }
+    }
 
     render() {
         return (
@@ -64,8 +64,8 @@ class Habits extends Component {
                 toDoItem={this.state.toDoItem}
                 updateToDoItem={this.updateToDoItem}
                 saveToDoItem={this.saveToDoItem}
-            />
-        */}
+            /> */}
+       
                 <ToDoList
                     toDoList={this.state.toDoList}
                     markAsDone={this.markAsDone}
