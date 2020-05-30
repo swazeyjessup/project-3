@@ -8,6 +8,7 @@ const passport = require("./client/src/passport/setup");
 const auth = require("./client/src/routes/auth");
 //add route to login page - ask Chris?
 const MONGO_URI = "mongodb://localhost:27017/login";
+const Habit = require('./client/src/models/Habit');
 
 mongoose.Promise = global.Promise;
 mongoose.connect(MONGO_URI, "mongodb://localhost:27017/HabitTracker", {
@@ -16,7 +17,7 @@ mongoose.connect(MONGO_URI, "mongodb://localhost:27017/HabitTracker", {
     .then(console.log(`MongoDB connected ${MONGO_URI}`))
     .catch(err => console.log(err));
 
-const Habit = require('./client/src/models/Habit');
+
 
 mongoose.Promise = global.Promise;
 mongoose.connect("mongodb://localhost:27017/HabitTracker", {
