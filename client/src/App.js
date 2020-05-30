@@ -1,10 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
-import NavBar from "./components/NavBar";
-import Header from "./components/Header";
-import Wrapper from "./components/Wrapper";
-import Footer from "./components/Footer";
+
 
 import Login from "./pages/Login";
 import Form from "./pages/Form";
@@ -19,15 +16,12 @@ class App extends Component {
     return (
       <Router>
       <div className="page">
-        <NavBar />
-        <Header />
-        <Wrapper>
+
       <Route exact path="/" component={Login} />
       <Route exact path="/habits" component={Habits} />
       <Route exact path="/form" component={Form} />
       <Route exact path="/leaderboard" component={Leaderboard} />
-      </Wrapper>
-      <Footer />
+
       </div>
       
       </Router>

@@ -5,6 +5,11 @@ import SavedHabit from "../components/SavedHabit/SavedHabit";
 
 import axios from 'axios';
 
+import NavBar from "../components/NavBar";
+import Header from "../components/Header";
+import Wrapper from "../components/Wrapper";
+import Footer from "../components/Footer";
+
 import style from "./style.css";
 
 class SavedHabits extends Component {
@@ -57,22 +62,31 @@ class SavedHabits extends Component {
 
     render() {
         return (
-            <div className="container">
-                <h1>Add Habit</h1>
-                {/* <AddToDo
-                toDoItem={this.state.toDoItem}
-                updateToDoItem={this.updateToDoItem}
-                saveToDoItem={this.saveToDoItem}
-            />
-        */}
-                <SavedHabit
-                    Savedhabit={this.state.SavedHabit}
-                    markAsDone={this.markAsDone}
-                />
-            </div>
+            <div>
+            <NavBar />
+            <Header />
+            <Wrapper>
+        <div className="container">
+        <h1>Habits</h1>
+        {/* <AddToDo
+            toDoItem={this.state.toDoItem}
+            updateToDoItem={this.updateToDoItem}
+            saveToDoItem={this.saveToDoItem}
+        /> */}
+        <SavedHabit
+            SavedHabit={this.state.SavedHabit}
+            markAsDone={this.markAsDone}
+        />
+        </div> 
+        </Wrapper>
+        <Footer />
+        </div>
         );
     }
 
+
 }
+
+
 
 export default SavedHabits;
