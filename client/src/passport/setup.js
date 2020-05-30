@@ -1,7 +1,9 @@
 const bcrypt = require("bcryptjs");
 const User = require("../models/users");
 const passport = require("passport");
-const LocalStrategy = require("passport-local").Strategy;
+const GoogleStrategy = require("passport-google-oauth20")
+
+// const LocalStrategy = require("passport-local").Strategy;
 
 passport.serializeUser((user, done) => {
     done(null, user.id);
@@ -12,6 +14,13 @@ passport.deserializeUser((id, done) => {
         done(err, user);
     });
 });
+
+passport.use(
+    
+)
+
+
+
 
 //Local strategy
 passport.use(
