@@ -1,16 +1,15 @@
 import React, { Component } from "react";
 // import AddToDo from "../components/AddToDo";
-import ToDoList from "../components/ToDoList";
-import SHabit from "../components/SHabit/SHabit";
+import SavedHabit from "../components/SavedHabit/SavedHabit";
 // import Form from "../pages/Form";
 
 import axios from 'axios';
 
 import style from "./style.css";
 
-class Habits extends Component {
+class SavedHabits extends Component {
     state = {
-        SHabit: '',
+        SavedHabit: '',
         toDoList: [
             {
                 text: 'Display to do item',
@@ -19,7 +18,7 @@ class Habits extends Component {
         ]
     };
 
-    updateSHabit = (event) => {
+    updateSavedHabit = (event) => {
         const { name, value } = event.target;
 
         this.setState({
@@ -27,7 +26,7 @@ class Habits extends Component {
         })
 
         axios
-            .get("/api/HabitTracker")
+            .get("/api/savedHabits")
             .then((response) => {
                 this.setState({ [name]: response.data });
             })
@@ -66,8 +65,8 @@ class Habits extends Component {
                 saveToDoItem={this.saveToDoItem}
             />
         */}
-                <ToDoList
-                    toDoList={this.state.toDoList}
+                <SavedHabit
+                    Savedhabit={this.state.SavedHabit}
                     markAsDone={this.markAsDone}
                 />
             </div>
@@ -76,4 +75,4 @@ class Habits extends Component {
 
 }
 
-export default Habits;
+export default SavedHabits;
