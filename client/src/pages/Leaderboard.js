@@ -11,8 +11,15 @@ class Leaderboard extends Component {
 
     render() {
         return(
+            <div>
+            <NavBar />
+            <Header />
+            <Wrapper>
             <div className="container">
                 <h1>Leaderboard</h1>
+            </div>
+            </Wrapper>
+            <Footer />
             </div>
         )
     }
