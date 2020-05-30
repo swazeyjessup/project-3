@@ -20,6 +20,17 @@ class App extends Component {
         ]
     };
 
+    componentDidMount () {
+        axios
+            .get('/HabitTracker')
+            .then((response) => {
+                this.setState({ HabitList: response.data });
+            })
+            .catch((error) => {
+                console.log('error on component did mount', error)
+            })
+    }
+
     updateToDoItem = (event) => {
         const { name, value } = event.target;
 

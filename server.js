@@ -2,26 +2,25 @@ const express = require("express");
 const PORT = process.env.PORT || 3030;
 const app = express();
 const mongoose = require('mongoose');
-const Habit = require('./client/src/models/Habit');
+
 // const passport = require("./client/src/passport/setup");
 // const auth = require("./client/src/routes/auth");
 // const session = require("express-session");
 // const MongoStore = require("connect-mongo")(session);
 
+let Habit;
 
 mongoose.Promise = global.Promise;
 mongoose.connect("mongodb://localhost:27017/HabitTracker", {
     useNewUrlParser: true
 })
-    .then(console.log(`MongoDB connected`))
+    .then(function(){
+        console.log('Mongoose Connected')
+        Habit = require('./client/src/models/Habit');    
+    })
     .catch(err => console.log(err));
 
 
-
-mongoose.Promise = global.Promise;
-mongoose.connect("mongodb://localhost:27017/HabitTracker", {
-    useNewUrlParser: true
-});
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -74,16 +73,21 @@ app.delete("*", (request, response) => {
         });
 });
 
-app.post("*", (request, response) => {
+app.post("/HabitTracker", (request, response) => {
     const HabitData = request.body;
-    console.log(HabitData)
-    Habit.create(HabitData)
-        .then(function () {
-            response.status(200).end();
-        })
-        .catch(function (error) {
-            response.status(404).send(error.message);
-        });
+    console.log('is this working?', HabitData)
+    Habit.create(HabitData, function(){
+        response.status(200).end();
+    })
+        // .then(function () {
+        //     console.log('then on post')
+        //     response.status(200).end();
+            
+        // })
+        // .catch(function (error) {
+        //     console.log('catch on post')
+        //     response.status(404).send(error.message);
+        // });
 });
 
 app.listen(PORT, () => {

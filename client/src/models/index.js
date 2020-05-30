@@ -1,4 +1,4 @@
 module.exports = {
     Habit: require("./Habit"),
-    User: require("./users")
+    // User: require("./users")
 }
