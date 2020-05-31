@@ -1,4 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import App from "../../pages/Habits";
+import history from "../History/index"
+
 
 export default function LoginForm() {
 
@@ -67,7 +71,8 @@ export default function LoginForm() {
         
         <br></br>
         </div>
-        <button className="btn"
+        <button className="btn" 
+        onClick={() => history.push('/Habits')}
         //onClick={this.handleFormSubmit}
         >
           Login</button>
