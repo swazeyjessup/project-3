@@ -4,7 +4,13 @@ import ToDoItem from '../ToDoItem';
 function HabitList(props) {
 const HabitList = props.HabitList;
 const MarkAsDone = props.MarkAsDone;
-const Score = props.Score;
+const toDoItem = props.toDoItem;
+const score = props.score
+
+
+console.log('habit list score', score)
+console.log('habit list props.score', props.score)
+// console.log('habit list toDoItem', toDoItem)
 
 return (
 <div>
@@ -16,7 +22,7 @@ return (
             MarkAsDone={MarkAsDone}
             index={index}
             key={index}
-            Score={Score}
+            score={toDoItem.score}
         />
         ))
     }
