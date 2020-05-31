@@ -10,8 +10,8 @@ return (<div className={toDoItem.done ? 'done' : ''}>
 <button
     type="button" 
     onClick={MarkAsDone} 
-    Scpre={Score}
+    Score={Score}
     value={index}>done</button>
 {toDoItem.text}
-    </div>);
+</div>);
 }
