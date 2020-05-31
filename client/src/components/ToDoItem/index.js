@@ -1,18 +1,28 @@
 import React from 'react';
+import { Collection } from 'mongoose';
 
 export default function ToDoItem(props) {
 const toDoItem = props.toDoItem;
 const MarkAsDone = props.MarkAsDone;
 const index = props.index;
-const score = props.score;
+const score = toDoItem.score
+
+// score.setState({
+//     score: {
+//         type: Number
+//     }
+// })
+
+console.log(score, "injex.js SCORE")
+console.log(toDoItem.score, 'todoitem.score property')
 
 return (<div className={toDoItem.done ? 'done' : ''}>
 <button
     type="button" 
     onClick={MarkAsDone} 
-    score={score}
-    value={index}>done</button>
+    value={index}
+    >done</button>
 {toDoItem.text}
-
+{score}
 </div>);
 }
