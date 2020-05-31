@@ -19,7 +19,8 @@ class Form extends Component {
       toDoList: [
         {
           text: 'Display to do item',
-          done: true
+          done: true,
+          score: 0
         }
       ]
     };
@@ -40,7 +41,8 @@ class Form extends Component {
   
       const newHabit = {
           text: this.state.toDoItem,
-          done: false
+          done: false,
+          score: 0
           }
   
       axios
@@ -59,7 +61,8 @@ class Form extends Component {
       const index = event.target.value;
       let toDoItem = this.state.toDoList[index];
       toDoItem.done = !toDoItem.done;
-  
+      let score = this.state.score;
+      
       this.setState({
         toDoList: this.state.toDoList
       })
@@ -73,7 +76,6 @@ class Form extends Component {
         <Header />
         <Wrapper>
 
-       
         <div className="container">
       
         <h1>Add Habit</h1>
@@ -88,8 +90,8 @@ class Form extends Component {
           markAsDone={this.markAsDone}
         /> */}
       </div> 
-       </Wrapper>
-       <Footer />
+        </Wrapper>
+        <Footer />
       </div>
     );
 }
