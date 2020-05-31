@@ -4,14 +4,15 @@ export default function ToDoItem(props) {
 const toDoItem = props.toDoItem;
 const MarkAsDone = props.MarkAsDone;
 const index = props.index;
-const Score = props.Score
+const score = props.score;
 
 return (<div className={toDoItem.done ? 'done' : ''}>
 <button
     type="button" 
     onClick={MarkAsDone} 
-    Score={Score}
+    score={score}
     value={index}>done</button>
 {toDoItem.text}
+
 </div>);
 }
