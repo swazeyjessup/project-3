@@ -16,7 +16,7 @@ class App extends Component {
             {
                 text: 'Display to do item',
                 done: true,
-                score: 0
+                Score: 0
             }
         ]
     };
@@ -44,17 +44,20 @@ class App extends Component {
         const index = event.target.value;
         let toDoItem = this.state.HabitList[index];
         toDoItem.done = !toDoItem.done;
-        let score = this.state.score;
+        let Score = this.state.Score;
 
         // HabitList.score.update(
         //     { $inc: { score: +1 } }
         // )
 
         this.setState({
-            HabitList: this.state.HabitList
+            HabitList: this.state.HabitList,
+            Score: this.state.Score+1,
+            
         })
         
-
+        console.log('the score is', Score)
+        console.log('this is habit list', HabitList)
     }
     
 
