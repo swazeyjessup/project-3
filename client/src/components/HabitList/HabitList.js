@@ -1,10 +1,22 @@
 import React from 'react';
 import ToDoItem from '../ToDoItem';
+import { Collection } from 'mongoose';
+
 
 function HabitList(props) {
 const HabitList = props.HabitList;
 const MarkAsDone = props.MarkAsDone;
-const Score = props.Score;
+const toDoItem = ToDoItem;
+const score = HabitList.score
+
+
+console.log('To Do Item', ToDoItem)
+console.log('SCORE', score)
+
+// console.log('habit list score', score)
+// console.log('habit list HabitList.score', HabitList.score)
+// console.log('habit list toDoItem', toDoItem)
+console.log('HabitList: ', HabitList)
 
 return (
 <div>
@@ -16,10 +28,10 @@ return (
             MarkAsDone={MarkAsDone}
             index={index}
             key={index}
-            Score={Score}
+            score={toDoItem.score}
         />
         ))
-    }
+    }   
     
 </div>
 );
