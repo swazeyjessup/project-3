@@ -15,7 +15,7 @@ class App extends Component {
         HabitList: [
             {
                 text: 'Display to do item',
-                done: true
+                done: false
             }
         ]
     };
