@@ -10,7 +10,7 @@ return (<li className={toDoItem.done ? 'done' : ''}>
     type="button" 
     onClick={MarkAsDone} 
     // checked={toDoItem.done} 
-    value={index}>done</button>
+    value={index}>Done</button>
 {toDoItem.text}
 </li>);
 }
