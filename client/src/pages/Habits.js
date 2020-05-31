@@ -15,7 +15,8 @@ class App extends Component {
         HabitList: [
             {
                 text: 'Display to do item',
-                done: false
+                done: true,
+                score: 0
             }
         ]
     };
@@ -43,11 +44,17 @@ class App extends Component {
         const index = event.target.value;
         let toDoItem = this.state.HabitList[index];
         toDoItem.done = !toDoItem.done;
-    
+        let score = this.state.score;
+
+        // HabitList.score.update(
+        //     { $inc: { score: +1 } }
+        // )
+
         this.setState({
             HabitList: this.state.HabitList
         })
         
+
     }
     
 
