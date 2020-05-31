@@ -19,12 +19,14 @@ a {
 
 .nav-item {
     font-size: 25px;
+
 }
 
 .logo2 {
    
    height: 100px;
     width: auto;
-   padding: 0 0 0 150px ;
+    margin-left: 0px;
+   /* padding: 0 0 0 150px ; */
 }
 
