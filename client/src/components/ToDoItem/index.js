@@ -13,10 +13,5 @@ return (<div className={toDoItem.done ? 'done' : ''}>
     Scpre={Score}
     value={index}>done</button>
 {toDoItem.text}
-<<<<<<< HEAD
-
-</li>);
-=======
-</div>);
->>>>>>> 76023341f5b03add6c287a3e0d4d9997d625794c
+    </div>);
 }
