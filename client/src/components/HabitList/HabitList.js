@@ -13,9 +13,10 @@ const score = HabitList.score
 console.log('To Do Item', ToDoItem)
 console.log('SCORE', score)
 
-console.log('habit list score', score)
-console.log('habit list props.score', props.score)
+// console.log('habit list score', score)
+// console.log('habit list HabitList.score', HabitList.score)
 // console.log('habit list toDoItem', toDoItem)
+console.log('HabitList: ', HabitList)
 
 return (
 <div>

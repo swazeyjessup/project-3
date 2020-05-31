@@ -6,6 +6,7 @@ import NavBar from "../components/NavBar";
 import Header from "../components/Header";
 import Wrapper from "../components/Wrapper";
 import Footer from "../components/Footer";
+import ToDoItem from '../components/ToDoItem';
 
 import "./style.css";
 
@@ -46,7 +47,7 @@ class App extends Component {
         const index = event.target.value;
         let toDoItem = this.state.HabitList[index];
         toDoItem.done = !toDoItem.done;
-        let score = this.state.HabitList.score;
+        let score = toDoItem.score+1;
 
         // HabitList.score.update(
         //     { $inc: { score: +1 } }
@@ -54,12 +55,12 @@ class App extends Component {
 
         this.setState({
             HabitList: this.state.HabitList,
-            score: this.state.score+1,
+            score:+1,
             
         })
         
-        console.log('the score is', score)
-        console.log('this is habit list', HabitList)
+        console.log(score, 'score in MarkAsDone Called !!!!!!!!!!!')
+        console.log('MarkAsDone Called')
     }
     
 

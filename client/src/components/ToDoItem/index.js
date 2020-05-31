@@ -6,6 +6,7 @@ const toDoItem = props.toDoItem;
 const MarkAsDone = props.MarkAsDone;
 const index = props.index;
 const score = toDoItem.score
+// let scoreState = this.state.score
 
 // score.setState({
 //     score: {
@@ -13,8 +14,14 @@ const score = toDoItem.score
 //     }
 // })
 
-console.log(score, "injex.js SCORE")
-console.log(toDoItem.score, 'todoitem.score property')
+// AddScore = (event) => {
+//     score: scoreState+1,
+// }
+
+// console.log(toDoItem.score, 'todoitem.score property')
+// console.log(props.toDoItem.score, 'props.todoitem.score property')
+console.log(score, 'score property')
+// console.log(scoreState, 'scoreState property')
 
 return (<div className={toDoItem.done ? 'done' : ''}>
 <button
