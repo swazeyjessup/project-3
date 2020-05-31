@@ -4,10 +4,11 @@ import ToDoItem from '../ToDoItem';
 function HabitList(props) {
 const HabitList = props.HabitList;
 const MarkAsDone = props.MarkAsDone;
+const Score = props.Score
 
 return (
 <div>
-    <ul>
+    
     {
         HabitList.map((toDoItem, index) => (
         <ToDoItem
@@ -15,10 +16,11 @@ return (
             MarkAsDone={MarkAsDone}
             index={index}
             key={index}
+            Score={Score}
         />
         ))
     }
-    </ul>
+    
 </div>
 );
 }
