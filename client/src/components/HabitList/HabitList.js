@@ -4,7 +4,7 @@ import ToDoItem from '../ToDoItem';
 function HabitList(props) {
 const HabitList = props.HabitList;
 const MarkAsDone = props.MarkAsDone;
-const Score = props.Score
+const Score = props.Score;
 
 return (
 <div>
