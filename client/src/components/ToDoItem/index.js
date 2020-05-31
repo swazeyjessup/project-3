@@ -15,3 +15,18 @@ return (<div className={toDoItem.done ? 'done' : ''}>
 {toDoItem.text}
 </div>);
 }
+
+render() {
+    return(
+        <div>
+        <NavBar />
+        <Header />
+        <Wrapper>
+        <div className="container">
+            <h1>Leaderboard</h1>
+        </div>
+        </Wrapper>
+        <Footer />
+        </div>
+    )
+}

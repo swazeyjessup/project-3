@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
 
-class Leaderboard extends Component {
+class UpdateLeaderboard extends Component {
 
-    
+    markAsDone = (event) => {
+        state = {
+            toDoItem: "",
+            done: true
+        }
 
 
 
