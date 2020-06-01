@@ -89,6 +89,21 @@ app.post("/HabitTracker", (request, response) => {
         // });
 });
 
+app.put('/api/updateScore/:id', function(req,res){
+    //Habit.update()
+    console.log(`
+    put route /api/
+    
+    req.body :${JSON.stringify(req.body)}
+    req.params: ${req.params.id}
+    `)
+    Habit.updateOne({_id: req.params.id }, {score: req.body.score})
+    .then(data => {
+        res.json(data)
+    })
+    
+    })
+
 app.listen(PORT, () => {
     console.log(`🌎 ==> API server now on port ${PORT}!`);
 });
