@@ -55,8 +55,6 @@ class App extends Component {
 
         this.setState({
             HabitList: this.state.HabitList,
-            score:+1,
-            
         })
         
         console.log(score, 'score in MarkAsDone Called !!!!!!!!!!!')
