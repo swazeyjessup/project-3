@@ -52,7 +52,6 @@ class App extends Component {
         // toDoItem.done = !toDoItem.done;
         // let score = toDoItem.score+1;
 
-       
 axios.put('/api/updateScore/'+id, {score: score+1})
 .then(resp => {
     console.log(resp)
@@ -70,7 +69,7 @@ axios.put('/api/updateScore/'+id, {score: score+1})
 
 
 })
-      
+
         console.log(score, 'score in MarkAsDone Called !!!!!!!!!!!')
         console.log('MarkAsDone Called')
     }

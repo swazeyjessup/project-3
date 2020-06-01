@@ -104,6 +104,34 @@ app.put('/api/updateScore/:id', function(req,res){
     
     })
 
+app.get('/api/sortedHabits/:id', function(req,res){
+    console.log(`
+    sorted get route /api/
+    
+    req.body :${JSON.stringify(req.body)}
+    req.params: ${req.params.id}
+    `)
+    Habit.find({_id: req.params.id },
+        ['text', 'score'],
+        {
+            skip:0,
+            limit:10,
+            sort:{
+                score: +1
+            }
+        },
+        function(err) {
+            console.log(err);
+        }
+        ).then(data => {
+            res.json(data)
+            console.log(data)
+        })
+        .catch(function () {
+            response.status(404).end("Can not find and sort list!");
+        });
+});
+
 app.listen(PORT, () => {
     console.log(`🌎 ==> API server now on port ${PORT}!`);
 });
