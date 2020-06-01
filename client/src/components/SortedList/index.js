@@ -6,7 +6,7 @@ import { Collection } from 'mongoose';
 function SortedList(props) {
 const SortedList = props.SortedList;
 const toDoItem = SortedItem;
-const score = SortedList.score
+const score = SortedList.score;
 
 
 console.log('To Do Item', SortedItem)

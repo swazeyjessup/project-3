@@ -12,6 +12,15 @@ import "./App.css";
 
 class App extends Component {
 
+  // let imgUrl = './img/download.jpeg';
+  // let styles = {
+  //     root: {
+  //         backgroundImage: url(./img/download.jpeg);
+  //     background-repeat: repeat-y;
+  //     height: 100%;
+  //     },
+  //   }
+
   render() {
     return (
       <Router>

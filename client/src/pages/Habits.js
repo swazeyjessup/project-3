@@ -11,6 +11,7 @@ import ToDoItem from '../components/ToDoItem';
 import "./style.css";
 
 class App extends Component {
+
     state = {
         toDoItem: '',
         HabitList: [
@@ -72,7 +73,7 @@ axios.put('/api/updateScore/'+id, {score: score+1})
 
     render() {
         return (
-            <div>
+            <div className="page2">
             <NavBar />
             <Header />
             <Wrapper>

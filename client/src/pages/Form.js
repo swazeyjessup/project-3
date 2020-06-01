@@ -71,7 +71,7 @@ class Form extends Component {
 
     render() {
     return (
-      <div>
+      <div className="page2">
         <NavBar />
         <Header />
         <Wrapper>

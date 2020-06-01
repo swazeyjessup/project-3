@@ -43,7 +43,7 @@ class Login extends Component {
 
   render() {
     return (
-      <div>
+      <div className="page2">
         <Header />
         <Wrapper>
         <div className="container">
