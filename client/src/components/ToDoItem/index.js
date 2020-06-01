@@ -1,5 +1,6 @@
 import React from 'react';
 import { Collection } from 'mongoose';
+import "./style.css";
 
 export default function ToDoItem(props) {
 const toDoItem = props.toDoItem;
@@ -23,13 +24,27 @@ const score = toDoItem.score
 console.log(score, 'score property')
 // console.log(scoreState, 'scoreState property')
 
-return (<div className={toDoItem.done ? 'done' : ''}>
+return (
+<div className="container">
+    <div className="form-control">
+        <div className="item">
+        {toDoItem.text} 
+        
+        </div>
+        <p>Score: {score} </p>
+<div className={toDoItem.done ? 'done' : ''}>
 <button
     type="button" 
     onClick={MarkAsDone} 
     value={index}
-    >done</button>
-{toDoItem.text}
-{score}
-</div>);
-}
+    className="btn"
+    >Done</button>
+
+
+
+
+</div>
+</div>
+</div>
+)
+};
