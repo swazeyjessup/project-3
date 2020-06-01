@@ -46,11 +46,6 @@ class App extends Component {
     MarkAsDone = (score, id) => {
         console.log('Score: ', score)
         console.log('Id: ', id)
-        // const index = event.target.value;
-        // const index = event.target.value;
-        // let toDoItem = this.state.HabitList[index];
-        // toDoItem.done = !toDoItem.done;
-        // let score = toDoItem.score+1;
 
 axios.put('/api/updateScore/'+id, {score: score+1})
 .then(resp => {
