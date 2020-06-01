@@ -2,6 +2,7 @@ import React from 'react';
 import { Collection } from 'mongoose';
 import "./style.css";
 
+
 export default function ToDoItem(props) {
 const toDoItem = props.toDoItem;
 const MarkAsDone = props.MarkAsDone;
@@ -39,7 +40,6 @@ return (
     value={index}
     className="btn"
     >Done</button>
-
 
 
 

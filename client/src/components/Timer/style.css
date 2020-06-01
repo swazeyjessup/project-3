@@ -1,0 +1,13 @@
+.container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 15px;
+}
+.row {
+    width: 100%;
+}
+.row div {
+    display: inline-block;
+    padding: 15px;
+    width: 5%;
+}
