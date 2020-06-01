@@ -8,6 +8,7 @@ import Footer from "../components/Footer";
 import "./style.css";
 
 class Leaderboard extends Component {
+    
 
     render() {
         return(

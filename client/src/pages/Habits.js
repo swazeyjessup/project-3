@@ -43,20 +43,34 @@ class App extends Component {
     
 
 
-    MarkAsDone = (event) => {
-        const index = event.target.value;
-        let toDoItem = this.state.HabitList[index];
-        toDoItem.done = !toDoItem.done;
-        let score = toDoItem.score+1;
+    MarkAsDone = (score, id) => {
+        console.log('Score: ', score)
+        console.log('Id: ', id)
+        // const index = event.target.value;
+        // const index = event.target.value;
+        // let toDoItem = this.state.HabitList[index];
+        // toDoItem.done = !toDoItem.done;
+        // let score = toDoItem.score+1;
 
-        // HabitList.score.update(
-        //     { $inc: { score: +1 } }
-        // )
+       
+axios.put('/api/updateScore/'+id, {score: score+1})
+.then(resp => {
+    console.log(resp)
+    let HabitList = this.state.HabitList.map(habit => {
+        if(habit._id === id){
+            habit.score = score+1
+        }
+        return habit
+    })
 
-        this.setState({
-            HabitList: this.state.HabitList,
-        })
-        
+    this.setState({
+        HabitList
+    })
+    
+
+
+})
+      
         console.log(score, 'score in MarkAsDone Called !!!!!!!!!!!')
         console.log('MarkAsDone Called')
     }

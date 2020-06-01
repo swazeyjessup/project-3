@@ -36,7 +36,7 @@ return (
 <div className={toDoItem.done ? 'done' : ''}>
 <button
     type="button" 
-    onClick={MarkAsDone} 
+    onClick={() => MarkAsDone(score, toDoItem._id)} 
     value={index}
     className="btn"
     >Done</button>
