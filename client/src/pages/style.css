@@ -3,10 +3,8 @@ h1{
     color: #cad5d6;
 }
 
-.page2{
 
-    /* background-image: url(./img/download.jpeg);
-    background-repeat: repeat-y;
-    height: 100%; */
 
+.fixBottom {
+    margin-bottom: 150px;
 }

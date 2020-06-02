@@ -12,6 +12,8 @@ import "./App.css";
 
 class App extends Component {
 
+  // First try to fix Background Image
+
   // let imgUrl = './img/download.jpeg';
   // let styles = {
   //     root: {
@@ -20,6 +22,32 @@ class App extends Component {
   //     height: 100%;
   //     },
   //   }
+
+
+  // Second try to fix Background Image
+
+  // repeatImg() {
+  //   let imgUrl = './img/download.jpeg';
+  //   document.getElementById("root").style.backgroundImage = imgUrl;
+  //   document.getElementById("root").style.backgroundPosition = "top left";
+  //   document.getElementById("root").style.backgroundRepeat = "repeat-y";
+    
+  //   alert(document.getElementById("root").style.backgroundImage);
+  //   alert(document.getElementById("root").style.backgroundPosition);
+  //   alert(document.getElementById("root").style.backgroundRepeat);
+  //   }
+
+  // Third try
+
+  // colorbackground () {
+  //   document.getElementById("root").style.backgroundColor = '#61dafb'
+  // }
+
+  // Forth Try
+
+  // const isBackgroundRed = true;
+
+  
 
   render() {
     return (
@@ -32,7 +60,7 @@ class App extends Component {
       <Route exact path="/leaderboard" component={Leaderboard} />
 
       </div>
-      
+
       </Router>
     );
   }

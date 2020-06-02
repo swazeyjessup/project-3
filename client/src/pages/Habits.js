@@ -73,11 +73,11 @@ axios.put('/api/updateScore/'+id, {score: score+1})
 
     render() {
         return (
-            <div className="page2">
+            <div >
             <NavBar />
             <Header />
             <Wrapper>
-        <div className="container">
+        <div className="container fixBottom">
         <h1>Habits</h1>
         <HabitList
             HabitList={this.state.HabitList}
