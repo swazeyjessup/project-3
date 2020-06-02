@@ -36,11 +36,11 @@ class Leaderboard extends Component {
 
     render() {
         return(
-            <div className="page2">
+            <div>
             <NavBar />
             <Header />
             <Wrapper>
-            <div className="container">
+            <div className="container fixBottom">
                 <h1>Leaderboard</h1>
             <SortedList
             SortedList={this.state.SortedList}
