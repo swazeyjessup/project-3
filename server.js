@@ -11,7 +11,7 @@ const mongoose = require('mongoose');
 const Habit = require('./models/Habit');    
 
 mongoose.Promise = global.Promise;
-mongoose.connect("mongodb://<dbuser>:<dbpassword>@ds129442.mlab.com:29442/heroku_9dfh0gs5", {
+mongoose.connect("mongodb://localhost:27017/HabitTracker", {
     useNewUrlParser: true
 })
     .then(function(){
