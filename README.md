@@ -1,3 +1,12 @@
+# **Habit Tracker**
+ 
+## “We are what we repeatedly do. Excellence, then, is not an act, but a habit.” -Aristotle
+ 
+###### Welcome to Habit Tracker - the app that helps you build and keep up your habits! Have you been having a tough time with keeping up with your daily routines? Perhaps the quarantine has messed with your days? Have you lost motivation and would like a way to get it back? With the Habit Tracker app, you can input your daily routines to get you back on your daily patterns. You can keep track of making your bed early in the mornings, going on a long walk with your pup in the afternoons, hiking in the lovely mountains of Utah to watch the fiery sunsets in the evenings, and more! With each completed habit, you earn a point. The more habits you complete, the more points you earn.
+ 
+###### The database used for this app is MongoDB. When the user enters a new habit, it is displayed in the **Habits** page and is then registered in the database. Upon completing the habit, the user earns a point. The more that the habit is completed, the more points the user earns which are then constantly updated in the database. The **Add a Habit** page allows for habit inputs, and the **Leaderboard** page allows for the full display of habits sorted by most points.
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
