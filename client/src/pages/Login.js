@@ -10,8 +10,10 @@ import LoginForm from "../components/LoginForm";
 import Header from "../components/Header";
 import Wrapper from "../components/Wrapper";
 import Footer from "../components/Footer";
+import Quotes from "../components/Quotes";
 
 class Login extends Component {
+  
 
   //Setting component's initial state
   // state = {
@@ -52,6 +54,8 @@ class Login extends Component {
       <div>
             <LoginForm />
       </div>
+      <Quotes />
+      
       </Wrapper>
       <Footer />
       </div>
