@@ -9,7 +9,7 @@ const toDoItem = SortedItem;
 const score = SortedList.score;
 
 
-console.log('To Do Item', SortedItem)
+console.log('SortedItem on List', SortedItem)
 console.log('SCORE', score)
 console.log('SortedList: ', SortedList)
 

@@ -22,10 +22,15 @@ class Leaderboard extends Component {
         ]
     };
 
+    // changes here
     componentDidMount () {
         axios
         .get('/api/sortedHabits')
         .then((response) => {
+            response.data.sort(function(habit1, habit2){
+                return habit2.score-habit1.score
+
+            })
             this.setState({ SortedList: response.data });
         })
         .catch((error) => {
