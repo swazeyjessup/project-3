@@ -22,6 +22,7 @@ class Leaderboard extends Component {
         ]
     };
 
+    // changes here
     componentDidMount () {
         axios
         .get('/api/sortedHabits')

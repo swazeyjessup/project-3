@@ -115,21 +115,6 @@ app.get('/api/sortedHabits/:id', function(req,res){
     Habit.find({_id: req.params.id })
         .limit(10)
         .sort('score')
-        // .sort({score: 1})
-
-        // ,
-
-        // ['text', 'score'],
-        // {
-        //     skip:0,
-        //     limit:10,
-        //     sort:{
-        //         score: -1
-        //     }
-        // },
-        // function(err) {
-        //     console.log(err);
-        // }
         .then(data => {
             res.json(data)
             console.log(data)

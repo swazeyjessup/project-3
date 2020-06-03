@@ -8,7 +8,7 @@ const index = props.index;
 const score = toDoItem.score
 
 // console.log('SortedItem: ', SortedItem);
-console.log('toDoItem on Sorted: ', toDoItem);
+// console.log('toDoItem on Sorted: ', toDoItem);
 
 return (
 <div className="container">
