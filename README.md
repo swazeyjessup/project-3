@@ -11,6 +11,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 * Tech Used
 * Details of App and Challenges
 * Link to the Live Project
+* Prerequisites
 
 ## About this project
 
@@ -29,6 +30,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 * React-Alert
 
 ## Details of App and Challenges
+
 A lot of work was put into this APP trying to get pasport to work.  But we ran into conflicts with multipule databases.  The issue of database set up will need to be resolved to move forward with password.
 
 Logic is used to sort the habits list for the leaderboard after the database call.  Using Mongooses instructions did not create a working mongoose call that sorted the Habits.
@@ -50,6 +52,8 @@ Logic is used to sort the habits list for the leaderboard after the database cal
 See also the list of [contributors](https://github.com/swazeyjessup/project-3/graphs/contributors) who participated in this project.
 
 ## Link to the Live Project on Heroku will be posted here after it is hosted...
+
+## Link to GitHub code Repository: https://github.com/swazeyjessup/project-3
 
 ## Available Scripts
 
