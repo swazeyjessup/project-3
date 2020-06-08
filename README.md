@@ -49,6 +49,8 @@ Logic is used to sort the habits list for the leaderboard after the database cal
 
 See also the list of [contributors](https://github.com/swazeyjessup/project-3/graphs/contributors) who participated in this project.
 
+## Link to the Live Project on Heroku will be posted here after it is hosted...
+
 ## Available Scripts
 
 In the project directory, you can run:
