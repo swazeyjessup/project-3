@@ -3,11 +3,59 @@
 ## “We are what we repeatedly do. Excellence, then, is not an act, but a habit.” -Aristotle
  
 ###### Welcome to Habit Tracker - the app that helps you build and keep up your habits! Have you been having a tough time with keeping up with your daily routines? Perhaps the quarantine has messed with your days? Have you lost motivation and would like a way to get it back? With the Habit Tracker app, you can input your daily routines to get you back on your daily patterns. You can keep track of making your bed early in the mornings, going on a long walk with your pup in the afternoons, hiking in the lovely mountains of Utah to watch the fiery sunsets in the evenings, and more! With each completed habit, you earn a point. The more habits you complete, the more points you earn.
- 
-###### The database used for this app is MongoDB. When the user enters a new habit, it is displayed in the **Habits** page and is then registered in the database. Upon completing the habit, the user earns a point. The more that the habit is completed, the more points the user earns which are then constantly updated in the database. The **Add a Habit** page allows for habit inputs, and the **Leaderboard** page allows for the full display of habits sorted by most points.
-
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Table of Contents
+* About This Project
+* Tech Used
+* Details of App and Challenges
+* Link to the Live Project
+
+## About this project
+
+###### The database used for this app is MongoDB. When the user enters a new habit, it is displayed in the **Habits** page and is then registered in the database. Upon completing the habit, the user earns a point. The more that the habit is completed, the more points the user earns which are then constantly updated in the database. The **Add a Habit** page allows for habit inputs, and the **Leaderboard** page allows for the full display of habits sorted by most points.
+
+## Tech Used
+* React.js
+* Bootstrap
+* Google Fonts
+* Javascript
+* Heroku
+* CSS
+* Mongoose
+* MongoDB
+* React-Router-Dom
+* React-Alert
+
+## Details of App and Challenges
+A lot of work was put into this APP trying to get pasport to work.  But we ran into conflicts with multipule databases.  The issue of database set up will need to be resolved to move forward with password.
+
+Logic is used to sort the habits list for the leaderboard after the database call.  Using Mongooses instructions did not create a working mongoose call that sorted the Habits.
+
+## Authors
+
+* **Swazey Jessup** - *React Application Building* - [SwazeyJessup](https://github.com/swazeyjessup)
+* **Nilsen Reyes** - *React Application Building* - [NReyes1202](https://github.com/nreyes1202)
+* **Jean Peel** - *React Application Building* - [JeanPeel](https://github.com/JeanPeel)
+
+## Acknowledgments
+
+### Hat tips tp...
+
+* Thanks go to the Teacher and Teachers Aids of our bootcamp in helping us trouble shoot the different callenges we faced.
+
+See also the list of [contributors](https://github.com/swazeyjessup/project-3/graphs/contributors) who participated in this project.
+
+
+### Prerequisites
+
+The Libraries on this project are Bootstrap CSS and Script links, Jquery links, there is a Popper link also on the main html page but I hav enot used this yet.  
+
+The dependencies on this project are React, React Bootstrap, Express, Npde Lodash. 
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
 
 ## Available Scripts
 

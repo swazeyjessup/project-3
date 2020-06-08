@@ -39,7 +39,6 @@
 
 .page{
   /* position: static; */
-  background-color: purple;
   background-image: url(./img/download.jpeg);
   background-repeat: repeat-y;
   background-size: cover;

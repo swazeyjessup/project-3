@@ -23,7 +23,7 @@ class App extends Component {
         ]
     };
 
-    componentDidMount () {
+    componentDidMount() {
         axios
             .get('/HabitTracker')
             .then((response) => {
@@ -41,52 +41,52 @@ class App extends Component {
             [name]: value
         })
     };
-    
+
 
 
     MarkAsDone = (score, id) => {
         console.log('Score: ', score)
         console.log('Id: ', id)
 
-axios.put('/api/updateScore/'+id, {score: score+1})
-.then(resp => {
-    console.log(resp)
-    let HabitList = this.state.HabitList.map(habit => {
-        if(habit._id === id){
-            habit.score = score+1
-        }
-        return habit
-    })
+        axios.put('/api/updateScore/' + id, { score: score + 1 })
+            .then(resp => {
+                console.log(resp)
+                let HabitList = this.state.HabitList.map(habit => {
+                    if (habit._id === id) {
+                        habit.score = score + 1
+                    }
+                    return habit
+                })
 
-    this.setState({
-        HabitList
-    })
-    
+                this.setState({
+                    HabitList
+                })
 
 
-})
+
+            })
 
         console.log(score, 'score in MarkAsDone Called !!!!!!!!!!!')
         console.log('MarkAsDone Called')
     }
-    
+
 
     render() {
         return (
             <div >
-            <NavBar />
-            <Header />
-            <Wrapper>
-        <div className="container fixBottom">
-        <h1>Habits</h1>
-        <HabitList
-            HabitList={this.state.HabitList}
-            MarkAsDone={this.MarkAsDone}
-        />
-        </div> 
-        </Wrapper>
-        <Footer />
-        </div>
+                <NavBar />
+                <Header />
+                <Wrapper>
+                    <div className="container fixBottom">
+                        <h1>Habits</h1>
+                        <HabitList
+                            HabitList={this.state.HabitList}
+                            MarkAsDone={this.MarkAsDone}
+                        />
+                    </div>
+                </Wrapper>
+                <Footer />
+            </div>
         );
     }
 

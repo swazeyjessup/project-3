@@ -42,7 +42,7 @@ class Login extends Component {
   //   });
   // };
 
-  
+
   state = {
     QuoteItem: "",
     QuotesList: [
@@ -52,26 +52,26 @@ class Login extends Component {
       }
     ]
   };
-  
-  componentDidMount () {
+
+  componentDidMount() {
 
     Array.prototype.random = function () {
-      return this[Math.floor((Math.random()*this.length))];
+      return this[Math.floor((Math.random() * this.length))];
     }
-  
+
     axios
-    .get("https://type.fit/api/quotes/", {
-  
-    })
-    .then((response) => {
+      .get("https://type.fit/api/quotes/", {
+
+      })
+      .then((response) => {
         this.setState({ QuotesList: [response.data.random()] });
         console.log("state: ", this.state);
-    })
-    .catch((error) => {
+      })
+      .catch((error) => {
         console.log('error on component did mount', error)
-    });
-  
-    
+      });
+
+
   }
 
   // changes here
@@ -81,27 +81,27 @@ class Login extends Component {
       <div className="page2">
         <Header />
         <Wrapper>
-        <div className="container">
-        <h1>Login</h1>
-        </div>
-      <div>
+          <div className="container">
+            <h1>Login</h1>
+          </div>
+          <div>
             <LoginForm />
-      </div>
-      <h1>Quotes</h1>
-      <div>
-        <p>
-          {this.state.QuotesList[0].text}
-        </p>
-        <p>
-          {this.state.QuotesList[0].author}
-        </p>
-      </div>
-      {/* <QuotesList QuotesList={this.state.QuotesList}>
+          </div>
+          <h1>Quotes</h1>
+          <div>
+            <p>
+              {this.state.QuotesList[0].text}
+            </p>
+            <p>
+              {this.state.QuotesList[0].author}
+            </p>
+          </div>
+          {/* <QuotesList QuotesList={this.state.QuotesList}>
       {Quoteslist.text}
       {Quoteslist.author}
       </QuotesList> */}
-      </Wrapper>
-      <Footer />
+        </Wrapper>
+        <Footer />
       </div>
     )
 
