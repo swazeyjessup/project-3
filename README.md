@@ -47,16 +47,6 @@ Logic is used to sort the habits list for the leaderboard after the database cal
 
 See also the list of [contributors](https://github.com/swazeyjessup/project-3/graphs/contributors) who participated in this project.
 
-
-### Prerequisites
-
-The Libraries on this project are Bootstrap CSS and Script links, Jquery links, there is a Popper link also on the main html page but I hav enot used this yet.  
-
-The dependencies on this project are React, React Bootstrap, Express, Npde Lodash. 
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-
 ## Available Scripts
 
 In the project directory, you can run:
